@@ -12,7 +12,7 @@ const Home = () => {
   };
   const navigate = useNavigate();
   function startRegister() {
-      //navigate('/register');
+      navigate('/register');
   }
   return (
     <div className={styles.cardWrapper}>
