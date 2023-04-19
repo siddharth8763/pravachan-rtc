@@ -34,8 +34,8 @@ function App() {
 
 const GuestRoute = ({ path, ...rest }) => {
   const navigate = useNavigate();
-  //const { isAuth } = useSelector((state) => state.auth);
-  const isAuth = true;
+  const { isAuth } = useSelector((state) => state.auth);
+  //const isAuth = true;
   if (isAuth) {
     navigate("/rooms", { replace: true });
     return null;
