@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-import { Link, useNavigate  } from "react-router-dom";
+import { Link, useHistory  } from "react-router-dom";
 import Card from "../../Components/Shared/Card/Card";
 import Button from "../../Components/Shared/Button/Button";
 
@@ -10,9 +10,9 @@ const Home = () => {
     textDecoration: "none",
     marginLeft: "10px",
   };
-  const navigate = useNavigate();
+  const history = useHistory();
   function startRegister() {
-      navigate('/register');
+    history.push('/authenticate');
   }
   return (
     <div className={styles.cardWrapper}>
@@ -23,7 +23,7 @@ const Home = () => {
           sure nothing breaks
         </p>
         <div>
-          <Button onClick={startRegister} text="Get your username" />
+          <Button onClick={startRegister} text="Let's Go" />
         </div>
         <div className={styles.signinWrapper}>
           <span className={styles.hasInvite}>Have an invite text?</span>
